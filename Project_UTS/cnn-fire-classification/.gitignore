@@ -10,6 +10,8 @@ env/
 
 # Dataset and model artifacts
 data/raw/
+data/*.zip
+
 data/processed/
 models/
 *.keras

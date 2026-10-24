@@ -67,7 +67,7 @@ def main():
     )
     class_names = train_ds.class_names
     print("Class order:", class_names)
-    if class_names != ["Fire", "No Fire"]:
+    if class_names != ["Fire", "Non-Fire"]:
         raise SystemExit(f"Urutan label tidak sesuai ekspektasi: {class_names}")
 
     autotune = tf.data.AUTOTUNE

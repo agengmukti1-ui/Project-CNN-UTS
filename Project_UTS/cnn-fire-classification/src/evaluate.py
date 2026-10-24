@@ -26,7 +26,7 @@ def main():
         label_mode="binary", shuffle=False
     )
     class_names = test_ds.class_names
-    if class_names != ["Fire", "No Fire"]:
+    if class_names != ["Fire", "Non-Fire"]:
         raise SystemExit(f"Urutan label tidak sesuai ekspektasi: {class_names}")
 
     model = tf.keras.models.load_model(MODEL_PATH)

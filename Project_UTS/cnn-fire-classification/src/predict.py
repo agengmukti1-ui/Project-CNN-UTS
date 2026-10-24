@@ -1,4 +1,4 @@
-"""Predict Fire/No Fire for a single image."""
+"""Predict Fire/Non-Fire for a single image."""
 from pathlib import Path
 import argparse
 import numpy as np
@@ -6,10 +6,10 @@ import tensorflow as tf
 
 MODEL_PATH = Path("models/best_model.keras")
 IMG_SIZE = (180, 180)
-CLASS_NAMES = ["Fire", "No Fire"]
+CLASS_NAMES = ["Fire", "Non-Fire"]
 
 def main():
-    parser = argparse.ArgumentParser(description="Predict whether an image belongs to Fire or No Fire.")
+    parser = argparse.ArgumentParser(description="Predict whether an image belongs to Fire or Non-Fire.")
     parser.add_argument("--image", required=True, help="Path to an image file.")
     args = parser.parse_args()
 
@@ -24,15 +24,15 @@ def main():
     array = np.expand_dims(array, axis=0)
 
     model = tf.keras.models.load_model(MODEL_PATH)
-    # Output sigmoid is the probability of class index 1 (No Fire), since directory order is Fire, No Fire.
-    p_no_fire = float(model.predict(array, verbose=0)[0][0])
-    p_fire = 1.0 - p_no_fire
-    predicted = "No Fire" if p_no_fire >= 0.5 else "Fire"
+    # Output sigmoid is the probability of class index 1 (Non-Fire), since directory order is Fire, Non-Fire.
+    p_non_fire = float(model.predict(array, verbose=0)[0][0])
+    p_fire = 1.0 - p_non_fire
+    predicted = "Non-Fire" if p_non_fire >= 0.5 else "Fire"
 
     print(f"Image: {image_path}")
     print(f"Prediction: {predicted}")
     print(f"Fire score: {p_fire:.4f}")
-    print(f"No Fire score: {p_no_fire:.4f}")
+    print(f"Non-Fire score: {p_non_fire:.4f}")
     print("Catatan: skor model bukan probabilitas keselamatan yang tervalidasi.")
 
 if __name__ == "__main__":

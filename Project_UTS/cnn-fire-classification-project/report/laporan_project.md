@@ -2,10 +2,10 @@
 
 ## Implementasi Convolutional Neural Network (CNN) untuk Klasifikasi Citra Kebakaran dan Non-Kebakaran
 
-**Nama:** [Nama Mahasiswa]  
+**Nama:** Ageng Muktianto  
 **Mata Kuliah:** Computer Vision  
-**Program Studi:** [Program Studi]  
-**Universitas:** [Nama Universitas]
+**Program Studi:** Magister Teknik Informatika  
+**Universitas:** Universitas Pamulang
 
 ## Abstrak
 Project ini mengimplementasikan CNN untuk klasifikasi citra Fire dan No Fire menggunakan dataset publik Fire Recognition Image Dataset. Dataset dipersiapkan dengan menggunakan gambar original, kemudian dibagi menjadi training, validation, dan testing. Model dilatih menggunakan TensorFlow/Keras dan dievaluasi menggunakan accuracy, precision, recall, F1-score, serta confusion matrix. Hasil dan kesimpulan akhir harus ditambahkan berdasarkan eksperimen aktual.
