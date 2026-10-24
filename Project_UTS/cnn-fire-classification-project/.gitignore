@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.log
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Dataset and model artifacts
+data/raw/
+data/processed/
+models/
+*.keras
+*.h5
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Secrets
+.env
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
