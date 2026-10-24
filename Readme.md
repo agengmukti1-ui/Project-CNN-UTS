@@ -1,1 +1,1 @@
-Penelitian ini membahas tentang CNN gambar bergerak
+Penelitian ini membahas tentang CNN gambar bergerak revisi1
