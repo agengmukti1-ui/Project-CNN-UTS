@@ -1,1 +1,0 @@
-Penelitian ini membahas tentang CNN gambar bergerak revisi1
